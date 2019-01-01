@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".InsertActivity" tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+            android:text="NO:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noView"
+            android:layout_marginTop="37dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtNoU" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="26dp" android:layout_marginEnd="63dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtnameU"
+            android:hint="在這裡輸入名字"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/txtNoU"
+            android:layout_marginTop="78dp"/>
+    <TextView
+            android:text="NAME:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtnameU" android:layout_marginStart="26dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtNoU"
+            android:layout_marginTop="26dp"
+            app:layout_constraintStart_toEndOf="@+id/noView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="22dp" app:layout_constraintBottom_toTopOf="@+id/txtnameU"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="24dp"
+    />
+    <TextView
+            android:text="GENDER:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/genderGroupU" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" android:layout_marginStart="26dp"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:orientation="vertical" android:id="@+id/genderGroupU"
+            app:layout_constraintTop_toTopOf="@+id/txtnameU" app:layout_constraintStart_toStartOf="@+id/txtnameU"
+            android:layout_marginTop="67dp" app:layout_constraintBottom_toBottomOf="@+id/sprAgeU"
+            android:layout_marginBottom="67dp">
+        <RadioButton
+                android:text="男"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radBoyU"/>
+        <RadioButton
+                android:text="女"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radGirU"/>
+    </RadioGroup>
+    <TextView
+            android:text="AGE:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/sprAgeU" android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"/>
+    <Spinner
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:id="@+id/sprAgeU"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="TEL:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtTelU" android:layout_marginStart="26dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtTelU"
+            app:layout_constraintStart_toStartOf="@+id/sprAgeU" android:layout_marginTop="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/sprAgeU" android:hint="在這裡輸入電話"/>
+    <Button
+            android:text="Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            app:layout_constraintStart_toStartOf="@+id/btnDelete" android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtTelU"/>
+    <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/btnBac"
+            app:layout_constraintEnd_toStartOf="@+id/btnPre" android:layout_marginBottom="18dp"/>
+    <Button
+            android:text="NEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPre" android:layout_marginTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnUpdate" android:layout_marginEnd="17dp"
+    />
+    <Button
+            android:text="BACK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBac"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete" app:layout_constraintTop_toTopOf="@+id/btnPre"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp" app:layout_constraintBottom_toBottomOf="@+id/btnPre"
+            android:layout_marginEnd="3dp"/>
+</android.support.constraint.ConstraintLayout>
